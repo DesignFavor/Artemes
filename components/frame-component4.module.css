@@ -1,0 +1,192 @@
+.frameChild {
+  height: 4.375rem;
+  width: 13.188rem;
+  position: relative;
+  backdrop-filter: blur(40px);
+  border-radius: var(--br-smi);
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  display: none;
+}
+.div {
+  height: 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 5.5rem;
+  z-index: 1;
+}
+.contactContainerInner,
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.rectangleParent {
+  backdrop-filter: blur(40px);
+  border-radius: var(--br-smi);
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
+  justify-content: flex-start;
+  padding: var(--padding-2xl) var(--padding-42xl) var(--padding-2xl)
+    var(--padding-43xl);
+}
+.contactContainerInner {
+  width: 61.188rem;
+  justify-content: center;
+  padding: 0 var(--padding-xl) var(--padding-32xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--font-size-9xl);
+}
+.scegliLaTua,
+.scegliLaTua1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 6.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: inherit;
+}
+.scegliLaTua {
+  -webkit-text-stroke: 1px #f2d8be;
+  opacity: 0.95;
+}
+.scegliLaTua1 {
+  color: var(--color-blanchedalmond);
+  z-index: 1;
+  margin-left: -63.625rem;
+}
+.scegliLaTuaCameraParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-82xl);
+  font-size: var(--font-size-101xl);
+  color: transparent;
+}
+.frameItem {
+  width: 45.25rem;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+}
+.contactContainerChild {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.unionIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xs);
+  width: 100%;
+  height: 100%;
+}
+.emptyUnion {
+  position: absolute;
+  top: 1rem;
+  left: 0.813rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 1.75rem;
+  z-index: 1;
+}
+.unionParent {
+  height: 2.25rem;
+  width: 3.375rem;
+  position: relative;
+}
+.b {
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 1.938rem;
+  z-index: 1;
+}
+.unionElements {
+  width: 14.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.cameraHeader {
+  width: 44.25rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) var(--padding-527xl);
+  box-sizing: border-box;
+  font-family: var(--font-plus-jakarta-sans);
+}
+.cameraHeader,
+.contactContainer,
+.contactContainerWrapper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.contactContainer {
+  width: 63.625rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.contactContainerWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--dark-d0);
+  font-family: var(--font-anton);
+}
+
+.canvasContainer2
+
+@media screen and (max-width: 1050px) {
+  .scegliLaTua,
+  .scegliLaTua1 {
+    font-size: var(--font-size-29xl);
+    line-height: 3.75rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cameraHeader {
+    padding-bottom: var(--padding-336xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .div {
+    font-size: var(--font-size-3xl);
+  }
+  .scegliLaTua,
+  .scegliLaTua1 {
+    font-size: var(--font-size-11xl);
+    line-height: 2.5rem;
+  }
+}
+
+.bgs3 {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}

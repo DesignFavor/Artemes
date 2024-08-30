@@ -1,0 +1,299 @@
+.form {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.12em;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 5.938rem;
+}
+.formWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-27xl);
+  font-family: var(--font-bebas-neue);
+}
+.sendUsA {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+.fullNameInput {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-47xl) var(--padding-9xs);
+  color: var(--dark-d200);
+}
+.fullname {
+  position: relative;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 4.188rem;
+}
+.fullNameFieldChild {
+  border: 0;
+  background-color: transparent;
+  align-self: stretch;
+  height: 3.125rem;
+  font-family: var(--font-plus-jakarta-sans);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  color: var(--foundation-dark-d200);
+}
+.fullNameField {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-3xs);
+  gap: var(--gap-3xs);
+}
+.emailAddress {
+  position: relative;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 6.5rem;
+}
+.frameChild {
+  height: 3.125rem;
+  width: 13.406rem;
+  position: relative;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  display: none;
+}
+.enterEmailAddress {
+  position: relative;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  z-index: 1;
+}
+.rectangleParent {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-smi) var(--padding-lg) var(--padding-mini);
+  white-space: nowrap;
+}
+.message {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--dark);
+  display: inline-block;
+  min-width: 4.25rem;
+}
+.emailAddressParent,
+.phoneInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.phoneInput {
+  align-self: stretch;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-sm);
+  color: var(--foundation-dark-d200);
+}
+.emailAddressParent {
+  flex: 1;
+  gap: var(--gap-3xs);
+  min-width: 8.688rem;
+}
+.phoneNumber {
+  position: relative;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 6.938rem;
+}
+.rectangleGroup {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-smi) var(--padding-lg) var(--padding-mini);
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  color: var(--foundation-dark-d200);
+}
+.phoneField {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--gap-base);
+}
+.emailPhoneFields,
+.emailPhoneFieldsChild,
+.phoneField {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.emailPhoneFieldsChild {
+  border: 1px solid var(--color-darkgray);
+  background-color: transparent;
+  height: 7.125rem;
+  width: auto;
+  outline: 0;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: var(--padding-mini) var(--padding-lg);
+  font-family: var(--font-plus-jakarta-sans);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  color: var(--color-darkslategray);
+}
+.emailPhoneFields {
+  flex-direction: column;
+  padding: 0 0 var(--padding-7xs);
+  gap: var(--gap-3xs);
+}
+.submitMessageBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -0.437rem;
+  left: calc(50% - 112px);
+  border-radius: var(--br-xs);
+  background-color: var(--color-chocolate);
+}
+.frameInner {
+  height: 2.938rem;
+  width: 13.375rem;
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-peru);
+  display: none;
+}
+.submitYourMessage {
+  position: relative;
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  font-family: var(--font-anton);
+  color: var(--dark-d0);
+  text-align: center;
+  z-index: 2;
+}
+.frameIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 2;
+}
+.submitSpacer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs-5) 0 0;
+}
+.rectangleContainer {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-mini) var(--padding-3xs)
+    var(--padding-base);
+  background-color: var(--color-peru);
+  border-radius: var(--br-3xs);
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  z-index: 1;
+}
+.rectangleContainer,
+.submitButton,
+.submitContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.submitButton {
+  justify-content: flex-start;
+  position: relative;
+}
+.submitContainer {
+  align-self: stretch;
+  justify-content: center;
+}
+.contactContainerInner,
+.frameParent {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frameParent {
+  width: 31.563rem;
+  box-shadow: 0 5px 0#bd845a;
+  background-color: var(--helping);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-8xl-5) var(--padding-11xl) var(--padding-15xl-5);
+  gap: var(--gap-xs);
+}
+.contactContainerInner {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--dark);
+  font-family: var(--font-plus-jakarta-sans);
+}
+@media screen and (max-width: 1050px) {
+  .form {
+    font-size: var(--font-size-18xl);
+    line-height: 9.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .frameParent {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-3xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form {
+    font-size: var(--font-size-9xl);
+    line-height: 7.125rem;
+  }
+  .fullNameInput {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

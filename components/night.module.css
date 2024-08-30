@@ -1,0 +1,39 @@
+.vectorIcon {
+  height: 1.25rem;
+  width: 1.206rem;
+  position: relative;
+  min-height: 1.25rem;
+}
+.nightIcon,
+.vectorIcon1 {
+  height: 1.181rem;
+  width: 2.338rem;
+  position: relative;
+}
+.vectorIcon1 {
+  width: 0.656rem;
+  height: 0.563rem;
+}
+.night,
+.vectorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-7xs-5);
+}
+.night {
+  align-self: stretch;
+  box-shadow: 0 3px 0#000;
+  border-radius: var(--br-41xl);
+  background-color: var(--helping);
+  border: 1px solid var(--dark);
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  padding: var(--padding-lgi) var(--padding-6xl);
+  gap: var(--gap-5xs);
+  z-index: 1;
+}
