@@ -2,9 +2,11 @@ import type { NextPage } from "next";
 import React from "react";
 import FrameComponent2 from "./frame-component2";
 import styles from "./frame-component4.module.css";
-import background from "../public/theatre.png"
-import desk from "../public/"
+import background from "../public/theatre.png";
+import desk from "../public/";
+import Outside from "../public/outside.png";
 import Image from "next/image";
+import Cloud from "../public/cloud.png";
 
 export type FrameComponent4Type = {
   className?: string;
@@ -14,6 +16,10 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
   return (
     <section className={[styles.contactContainerWrapper, className].join(" ")}>
       <Image  src={background} className={styles.bgs3}/>
+      <Image src={Outside} className={styles.Outside}/>
+      <Image src={Cloud} className={styles.Cloud}/>
+
+
       <div className={styles.contactContainer}>
         <div className={styles.contactContainerInner}>
           <div className={styles.rectangleParent}>

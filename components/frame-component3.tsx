@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Night from "./Night";
 import styles from "./frame-component3.module.css";
-import { Leva } from "leva";
 
 export type FrameComponent3Type = {
     className?: string;
@@ -183,7 +182,6 @@ const FrameComponent3: React.FC<FrameComponent3Type> = ({ className = "" }) => {
                     </div>
                 </div>
             </div>
-            <Leva collapsed />
         </section>
     );
 };

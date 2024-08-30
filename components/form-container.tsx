@@ -20,7 +20,7 @@ const WebGiComponent: React.FC = () => {
       
       {/* Embed the second scene below the first scene using an iframe */}
       <iframe
-        src="http://localhost:5174"
+        src="http://localhost:5173"
         style={{
           position: "absolute",
           bottom: 0,

@@ -35,5 +35,7 @@
   align-content: flex-end;
   padding: var(--padding-lgi) var(--padding-6xl);
   gap: var(--gap-5xs);
+  width: 450px;
+  height: 60px;
   z-index: 1;
 }
