@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Night from "./Night";
+import Night from "./night";
 import styles from "./frame-component3.module.css";
+
+// Define the type for webgi controls
+interface WebGIControls {
+    changeEnvironment: (mode: string) => Promise<void>;
+}
 
 export type FrameComponent3Type = {
     className?: string;
@@ -10,47 +15,56 @@ const FrameComponent3: React.FC<FrameComponent3Type> = ({ className = "" }) => {
     const [mode, setMode] = useState("day");
 
     useEffect(() => {
-        // WebGI setup function
         const setupViewer = async () => {
             const { ViewerApp, addBasePlugins, FileTransferPlugin } = await import('webgi');
-            const viewer = new ViewerApp({
-                canvas: document.getElementById('webgi-canvas') as HTMLCanvasElement,
-            });
+            // Ensure the canvas element exists
+            const canvas = document.getElementById('webgi-canvas') as HTMLCanvasElement;
+            if (!canvas) {
+                console.error('Canvas element not found');
+                return;
+            }
 
-            await addBasePlugins(viewer);
-            await viewer.addPlugin(FileTransferPlugin);
-            await viewer.load("./assets/scene2.glb");
+            // Initialize the viewer with type assertion
+            const viewer = new ViewerApp({ canvas }) as any; // Use 'any' if types are incompatible
 
-            // Set default environment map
-            await viewer.setEnvironmentMap("./assets/day.hdr");
+            try {
+                await addBasePlugins(viewer);
+                await viewer.addPlugin(FileTransferPlugin);
+                await viewer.load("./assets/scene2.glb");
 
-            // Add a method to change the environment map
-            window.webgiControls = {
-                changeEnvironment: async (mode: string) => {
-                    let hdrFile = "";
-                    switch (mode) {
-                        case "day":
-                            hdrFile = "./assets/day.hdr";
-                            break;
-                        case "night":
-                            hdrFile = "./assets/night.hdr";
-                            break;
-                        case "warm":
-                            hdrFile = "./assets/sunset.hdr";
-                            break;
-                        default:
-                            hdrFile = "./assets/day.hdr"; // default fallback
-                    }
-                    console.log(`Attempting to load HDRI: ${hdrFile}`); // Debugging line
+                // Set default environment map
+                await viewer.setEnvironmentMap("./assets/day.hdr");
 
-                    try {
-                        await viewer.setEnvironmentMap(hdrFile);
-                        console.log(`Successfully loaded HDRI: ${hdrFile}`); // Debugging line
-                    } catch (error) {
-                        console.error(`Error loading HDRI: ${hdrFile}`, error); // Debugging line
-                    }
-                },
-            };
+                // Add a method to change the environment map
+                window.webgiControls = {
+                    changeEnvironment: async (mode: string) => {
+                        let hdrFile = "";
+                        switch (mode) {
+                            case "day":
+                                hdrFile = "./assets/day.hdr";
+                                break;
+                            case "night":
+                                hdrFile = "./assets/night.hdr";
+                                break;
+                            case "warm":
+                                hdrFile = "./assets/sunset.hdr";
+                                break;
+                            default:
+                                hdrFile = "./assets/day.hdr"; // default fallback
+                        }
+                        console.log(`Attempting to load HDRI: ${hdrFile}`); // Debugging line
+
+                        try {
+                            await viewer.setEnvironmentMap(hdrFile);
+                            console.log(`Successfully loaded HDRI: ${hdrFile}`); // Debugging line
+                        } catch (error) {
+                            console.error(`Error loading HDRI: ${hdrFile}`, error); // Debugging line
+                        }
+                    },
+                } as WebGIControls; // Type assertion for webgiControls
+            } catch (error) {
+                console.error("Error setting up WebGI viewer:", error);
+            }
         };
 
         setupViewer();
@@ -83,7 +97,7 @@ const FrameComponent3: React.FC<FrameComponent3Type> = ({ className = "" }) => {
 
     return (
         <section className={[styles.climaticInner, className].join(" ")}>
-            <canvas id="webgi-canvas" style={{ width: "100%", height: "100vh" , position: "absolute" }} />
+            <canvas id="webgi-canvas" style={{ width: "100%", height: "100vh", position: "absolute" }} />
             <div className={styles.comeLavoriamoParent}>
                 <h1 className={styles.comeLavoriamo}>Come lavoriamo</h1>
                 <div className={styles.dayNightSelectorWrapper}>
